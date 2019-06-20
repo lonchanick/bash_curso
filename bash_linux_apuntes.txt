@@ -1,0 +1,52 @@
+
+La instalacion de un programa basicamente se divide en varios directorios asi:
+
+/usr/bin : Es donde van los programas ejecutables (los binarios)
+/lib donde van todas las librerias
+/etc archivos de configuracion comunes
+/home donde es la carpeta del usuarios
+
+OBTENER USUARIO ROOT -> sudo su //y despues te pide la contraceña
+INSTALAR UNA APLICACION -> apt install aplication_name
+CREAR UN ARCHIVO -> touch prueba.txt
+VER DETALLES DE COMANDO -> man PARAM //param es el nombre del comando PJ. man touch
+MUESTRA ACTUAL DIRECTORIO -> pwd //print work directory
+CREAR NUEVO DIRECTORIO -> mkdir //make new directory
+REMOVER DIRECTORIO -> rm -r param param etc //remove
+CREAR ARCHIVOS DE TEXT -> hola mundo > ejemplo.txt
+IMPRIMIR ARCHIVOS DE TEXTO EN PANTALLA -> cat ejemplo.txt //en realidad sirve paraconcatenar
+PARA CAPTURAR VALORES POR TECLADO -> read var
+PARA VER LA AYUDA DE UN COMANDO -> command --help EJ. read --help
+COMO EJECUTAR UN ARCHIVO BASH -> bash archive.sh
+PARA AÑADIR PERMISOS DE EJCUCION A UN ARVHIVO-> chmod u+x program.sh //drwxr: 
+r:read 
+w:write 
+x:execute son los permisos que posee cada archivo
+
+ARVHIVOS MAS DETALLADOS -> ls -l 
+PARA SABER QUE USUARIO SOY ACTUALMENTE -> whoami
+PARA SABER EL TIPO DE ARCHIVO -> file param
+DESCARGADOR DE ARCHIVOS DE INTERNET -> wget URL //url es la ruta del archivo en internet
+#!/bin/bash //esta es la ruta que va al ejecutable de la terminal
+
+	================
+	EDICION DE TEXTO
+	================
+PARA ABRIR UN ARCHIVO Y EDITARLO -> nano file_name.sh (.txt, .etc ...)
+
+PARA ABRIR ARCHIVOS DE TEXTO MUY GRANDE Y VERLO MAS FACILMENTE 
+	* more file_name.txt || less file_name.txt (es mas completo)
+	* para poder buscar dentro del comando less empleamos "/param"
+	* grep " mas " divina_comedia.txt | less //encuentra solo las palabras mas y las muestra en less
+	* grep " la " divina_comedia.txt | wc -l //lo anterior mas este cuenta el numero de palabras
+	* grep -o " la " divina_comedia.txt //me extrae y muestra la palabra buscadas
+	* grep -o " la " divina_comedia.txt | wc -w //me cuenta todas la coincidencias
+	* grep -io "tu" divina_comedia.txt //donde i es ignore case
+	* grep -io "\stu\s" divina_comedia.txt //donde i es ignore case //'\s' indica que no haya nada ni antes ni despues de la palabra buscada
+
+CONTAR PALABRAS DE UN ARCHIVO -> WC file.txt -l //word count (man wc), -l cuenta el numero de lineas
+BUSCAR DENTRO DE UN ARVHICVO -> grep param file.txt //donde param es el parametro de busqueda
+	grep file.txt | more //le pasamos la salida del comando "grep" al comando "more"
+
+
+
