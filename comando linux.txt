@@ -1,0 +1,54 @@
+==
+SO
+==
+lsb_release -a //muestra la version del sistema operativo
+
+==============================
+       LIBERAR MEMORIA 
+==============================
+
+//estos comandos son para liberar memoria
+du -sh /var/cache/apt/archives
+sudo apt-get clean
+
+//este comando es para eliminar dependencias que ya no se estan utilizadndo
+sudo apt-get autoremove
+0980013621
+
+==============================
+        matar procesos 
+==============================
+//para matar el proceso
+kill -9 “PID del proceso”
+link: https://www.ochobitshacenunbyte.com/2018/06/14/buscar-y-matar-procesos-en-linux/
+
+//para ver los procesos
+ps aux
+link: http://persoal.citius.usc.es/tf.pena/ASR/Tema_3html/node2.html
+
+==============================
+       VARIOS - SHELL 
+==============================
+ls -al // mostrar archivos ocultos; podria agregarse -s -a para que sea mas legible
+rm -rfv /mi-directorio //para eliminar directorio con archivos dentro; sino intenta sudo
+mv old_name new_name //para renombrar un directorio o carpeta
+sudo dpkg -i package_file.deb //para jecutar paquetes .deb
+=====================================
+Solucionar error de dependecias rotas
+=====================================
+sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get update
+sudo apt-get autoclean
+sudo apt-get update	//eliminar paquetes huerfanos y actualiza la memoria de gestion de paquete
+
+sudo apt-get -f install //soluciona los errores de dependencia
+apt --fix-broken install //soluciona los errores de dependencia
+
+=====================================
+como cambiar el nombre del pc linux
+=====================================
+https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/
+
+=====================================
+ELIMINAR REPOSITORIOS EXTERNOS PPA's
+=====================================
+https://itsfoss.com/how-to-remove-or-delete-ppas-quick-tip/
