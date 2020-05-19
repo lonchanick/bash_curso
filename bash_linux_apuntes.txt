@@ -6,6 +6,7 @@ La instalacion de un programa basicamente se divide en varios directorios asi:
 /etc archivos de configuracion comunes
 /home donde es la carpeta del usuarios
 
+EDITAR ARCHIVO SIN ABRIRLO -> echo "content" > file.txt
 OBTENER USUARIO ROOT -> sudo su //y despues te pide la contraceña
 INSTALAR UNA APLICACION -> apt install aplication_name
 CREAR UN ARCHIVO -> touch prueba.txt
