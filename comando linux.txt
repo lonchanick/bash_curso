@@ -33,6 +33,8 @@ ls -al // mostrar archivos ocultos; podria agregarse -s -a para que sea mas legi
 rm -rfv /mi-directorio //para eliminar directorio con archivos dentro; sino intenta sudo
 mv old_name new_name //para renombrar un directorio o carpeta
 sudo dpkg -i package_file.deb //para jecutar paquetes .deb
+export PS1='> ' //cambia todo el path que se muestra en la terminal por el signo '> '
+
 =====================================
 Solucionar error de dependecias rotas
 =====================================
